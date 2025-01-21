@@ -10,7 +10,7 @@ jobs:
   build:
     name: Build and Test
     runs-on: ubuntu-22.04
-    permissions: read-write
+    permissions: write-all
 #      contents: read
 #      security-events: write
     steps:
@@ -43,7 +43,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/master' }}
     needs: [ build ]
     runs-on: ubuntu-22.04
-    permissions: read-write
+    permissions: write-all
 #      contents: read
 #      packages: write
 #      security-events: write
